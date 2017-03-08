@@ -1,0 +1,9 @@
+<h:html xmlns:xdc="http://www.xml.com/books"
+        xmlns:h="http://www.w3.org/HTML/1998/html4">
+ <h:head><h:title>Book Review</h:title></h:head>
+ <h:body>
+  <xdc:bookreview>
+   <xdc:title lorem="ipsum">wewt</xdc:title>
+  </xdc:bookreview>
+ </h:body>
+</h:html>

@@ -1,15 +1,36 @@
 defmodule Xslt do
   @moduledoc """
-  Documentation for Xslt.
+
+  Xslt is a lightweight wrapper around xsltproc. If you need to transform
+  XML using XSLT this is probably the easiest way to do it.
+
+  Using Porcelain, this library calls the xsltproc binary with the pathnames to
+  your XML files. It will then return the transformed XML in response.
+
   """
 
   alias Porcelain.Result
 
+  @type result :: {:ok, String.t} | {:error, String.t}
+
+  @spec transform(template :: String.t, xml :: String.t) :: result
+  @doc """
+  Transforms XML using an XSLT template.
+
+  ## Example:
+
+      iex> xml = Path.expand("./test/fixtures/product/simple_example.xml")
+      ...> template = Path.expand("./test/fixtures/product/xslt_template.xml")
+      ...> {:ok, html} = Xslt.transform(template, xml)
+      ...> Regex.replace(~r/\\n/, html, "")
+      "<html> <head><title>Book Review</title></head> <body>  <bookreview>   <title lorem=\\"ipsum\\">wewt</title>  </bookreview> </body></html>"
+  """
   def transform(template, xml) do
     Porcelain.shell("xsltproc #{template} #{xml}")
     |> handle_output
   end
 
+  @spec handle_output(result :: Result.t) :: result
   defp handle_output(%Result{status: 0, out: output}),
   do: {:ok, output}
 
