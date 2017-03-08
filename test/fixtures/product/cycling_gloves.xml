@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<GetMatchingProductResponse
+    xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+  <GetMatchingProductResult ASIN="B017R5CP1C" status="Success">
+    <Product
+        xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01"
+        xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A1F83G8C2ARO7P</MarketplaceId>
+          <ASIN>B017R5CP1C</ASIN>
+        </MarketplaceASIN>
+      </Identifiers>
+      <AttributeSets>
+        <ns2:ItemAttributes xml:lang="en-GB">
+          <ns2:Binding>Misc.</ns2:Binding>
+          <ns2:Brand>FREETOO</ns2:Brand>
+          <ns2:Color>Black</ns2:Color>
+          <ns2:Feature>Breathable &amp; absorb sweat - Highly breathable design with micropores on the finger and palm, releases the heat and ensures the comfort to wear.The terry cloth design on thumbs is mainly used to wipe the dripping and distracting sweat.</ns2:Feature>
+          <ns2:Feature>Flexibility - Adopts synthetic leather and spandex which offer high elasticity, allowing you to move your fingers flexibly and freely.</ns2:Feature>
+          <ns2:Feature>Easy Grabbing - Silicon fingertips (first 2 fingers) and raised cushions on palm enhance the grip and absorb vibrations.</ns2:Feature>
+          <ns2:Feature>Fluorescent outlook - highly reflective details improve visibility in low light, guaranteeing the safety of night riding.</ns2:Feature>
+          <ns2:Feature>Ideal for riding, hiking, mountain climbing, camping and many more outdoor activities to prevent your fingers from hurt or coldness.</ns2:Feature>
+          <ns2:IsMemorabilia>false</ns2:IsMemorabilia>
+          <ns2:Label>FREETOO</ns2:Label>
+          <ns2:Manufacturer>FREETOO</ns2:Manufacturer>
+          <ns2:PackageDimensions>
+            <ns2:Height Units="inches">1.65</ns2:Height>
+            <ns2:Length Units="inches">10.79</ns2:Length>
+            <ns2:Width Units="inches">6.14</ns2:Width>
+            <ns2:Weight Units="pounds">0.26</ns2:Weight>
+          </ns2:PackageDimensions>
+          <ns2:PackageQuantity>1</ns2:PackageQuantity>
+          <ns2:PartNumber>TP40210683-UK</ns2:PartNumber>
+          <ns2:ProductGroup>Sports</ns2:ProductGroup>
+          <ns2:ProductTypeName>SPORTING_GOODS</ns2:ProductTypeName>
+          <ns2:Publisher>FREETOO</ns2:Publisher>
+          <ns2:Size>XL: 224*112mm</ns2:Size>
+          <ns2:SmallImage>
+            <ns2:URL>http://ecx.images-amazon.com/images/I/51FP1Ow203L._SL75_.jpg</ns2:URL>
+            <ns2:Height Units="pixels">75</ns2:Height>
+            <ns2:Width Units="pixels">75</ns2:Width>
+          </ns2:SmallImage>
+          <ns2:Studio>FREETOO</ns2:Studio>
+          <ns2:Title>FREETOO Cycling Gloves Full Finger Cycling Gloves Riding Bike Mountain Climbing Gloves Men Women Work Gloves breathable elastic and protective ideal for Riding Hiking Climbing Camping black and red XL</ns2:Title>
+        </ns2:ItemAttributes>
+      </AttributeSets>
+      <Relationships>
+        <VariationParent>
+          <Identifiers>
+            <MarketplaceASIN>
+              <MarketplaceId>A1F83G8C2ARO7P</MarketplaceId>
+              <ASIN>B0186SA9EE</ASIN>
+            </MarketplaceASIN>
+          </Identifiers>
+        </VariationParent>
+      </Relationships>
+      <SalesRankings/>
+    </Product>
+  </GetMatchingProductResult>
+  <ResponseMetadata>
+    <RequestId>43f33aa3-12c1-47e8-9519-86b5cfeef35d</RequestId>
+  </ResponseMetadata>
+</GetMatchingProductResponse>
