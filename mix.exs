@@ -47,7 +47,7 @@ defmodule Xslt.Mixfile do
 
   defp package do
     [
-      name: "Xslt",
+      name: :xslt,
       files: ["lib", "config", "mix.exs", "README.md", "LICENSE"],
       maintainers: ["John Hamelink"],
       licenses: ["MIT"],
