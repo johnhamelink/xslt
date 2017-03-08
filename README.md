@@ -16,8 +16,9 @@ performance.
 
 ## Usage
 
-    {:ok, transformed_xml} = Xslt.transform("/path/to/template.xml", "/path/to/xml_file.xml")
-
+```elixir
+{:ok, transformed_xml} = Xslt.transform("/path/to/template.xml", "/path/to/xml_file.xml")
+```
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
