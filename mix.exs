@@ -41,7 +41,8 @@ defmodule Xslt.Mixfile do
     [
       {:porcelain, "~> 2.0"},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
+      {:eliver, "~> 1.0.0", only: :dev}
     ]
   end
 
