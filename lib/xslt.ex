@@ -29,6 +29,10 @@ defmodule Xslt do
     Porcelain.shell("xsltproc #{template} #{xml}")
     |> handle_output
   end
+  def transform(template, xml, params) do
+    Porcelain.shell("xsltproc #{params} #{template} #{xml}")
+    |> handle_output
+  end
 
   @spec handle_output(result :: Result.t) :: result
   defp handle_output(%Result{status: 0, out: output}),
