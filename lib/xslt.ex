@@ -35,6 +35,7 @@ defmodule Xslt do
     |> handle_output
   end
   def transform(_, xml) when is_bitstring(xml), do: File.read(xml)
+  def transform(template, xml, _) when is_bitstring(template) and is_bitstring(xml), do: transform(template, xml)
   def transform(_, xml, _) when is_bitstring(xml), do: File.read(xml)
 
   def transform(_, _), do: {:error, :bad_arguments}
