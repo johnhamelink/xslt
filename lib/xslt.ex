@@ -25,10 +25,21 @@ defmodule Xslt do
       ...> Regex.replace(~r/\\n/, html, "")
       "<html> <head><title>Book Review</title></head> <body>  <bookreview>   <title lorem=\\"ipsum\\">wewt</title>  </bookreview> </body></html>"
   """
-  def transform(template, xml) do
+
+  def transform(template, xml) when is_bitstring(template) and is_bitstring(xml) do
     Porcelain.shell("xsltproc #{template} #{xml}")
     |> handle_output
   end
+  def transform(template, xml, params)  when is_bitstring(template) and is_bitstring(xml) and is_bitstring(params) do
+    Porcelain.shell("xsltproc #{params} #{template} #{xml}")
+    |> handle_output
+  end
+  def transform(_, xml) when is_bitstring(xml), do: File.read(xml)
+  def transform(template, xml, _) when is_bitstring(template) and is_bitstring(xml), do: transform(template, xml)
+  def transform(_, xml, _) when is_bitstring(xml), do: File.read(xml)
+
+  def transform(_, _), do: {:error, :bad_arguments}
+  def transform(_, _, _), do: {:error, :bad_arguments}
 
   @spec handle_output(result :: Result.t) :: result
   defp handle_output(%Result{status: 0, out: output}),
