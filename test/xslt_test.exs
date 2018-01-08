@@ -32,8 +32,8 @@ defmodule XsltTest do
   test "Guards should return same xmls" do
     xml =  Path.expand("./test/fixtures/product/mws_doc_example.xml")
     {:ok, convert} = Xslt.transform(:anything, xml, "--stringparam param value")
-    {:ok, xml} = File.read(xml)
-    assert xml = convert
+    {:ok, fixture} = File.read(xml)
+    assert fixture == convert
   end
   test "Guards should return a non enoent error" do
     xml =  Path.expand("./test/fixtures/product/doesntexist.xml")
