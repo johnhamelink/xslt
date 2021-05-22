@@ -24,6 +24,9 @@ Using params:
 ```elixir
 {:ok, transformed_xml} = Xslt.transform("/path/to/template.xml", "/path/to/xml_file.xml", "--stringparam var_name value")
 ```
+```elixir
+{:ok, transformed_xml} = Xslt.transform("/path/to/template.xml", "<xml>...</xml>", "--xml-as-string")
+```
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
